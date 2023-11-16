@@ -11,7 +11,7 @@ class Qube < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/qube/releases/download/v0.4.0/qube_0.4.0_darwin_amd64.tar.gz"
-      sha256 "a592b4bd6a732849a8bd6a08b2d0978b5a350e7a0ce132e32372e53945296b43"
+      sha256 "777caea2bae4ce3433847cc3eed8fd7157e62324c59be6b560a9553b069bb88a"
 
       def install
         bin.install 'qube'
@@ -19,7 +19,7 @@ class Qube < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/winebarrel/qube/releases/download/v0.4.0/qube_0.4.0_darwin_arm64.tar.gz"
-      sha256 "cdf60c030cfdacc6c6a8a8e94d9dff38d607add07e6e4366f909296cc9155379"
+      sha256 "1ca091b8211c53de23ca53d991e17ce2e855a973e0b12de33b25c32a72dbda5a"
 
       def install
         bin.install 'qube'
@@ -30,7 +30,7 @@ class Qube < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/winebarrel/qube/releases/download/v0.4.0/qube_0.4.0_linux_arm64.tar.gz"
-      sha256 "8e68537aa7adafbb33db13ee68b7c72a65faa4e758203643d4b07cb70e445d95"
+      sha256 "62cfc2827330dade806331b8c754a4a540a77df54ae248d544796d958b405493"
 
       def install
         bin.install 'qube'
@@ -38,7 +38,7 @@ class Qube < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/qube/releases/download/v0.4.0/qube_0.4.0_linux_amd64.tar.gz"
-      sha256 "c23f8b5e2648f2d0cc39b94a16197cd9ed827484fb6f30134619efc8c1c098b8"
+      sha256 "9203e43a69e57532d6488e34d3ac1531b47098d31005cb9977c55c50f99e91df"
 
       def install
         bin.install 'qube'
