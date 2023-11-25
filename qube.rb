@@ -9,17 +9,17 @@ class Qube < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_darwin_arm64.tar.gz"
-      sha256 "bfbc4333064f0e78c927e1109065efb2e42f9e563246b8452be348264cf77749"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_darwin_amd64.tar.gz"
+      sha256 "bb0117fad7fd266c542f47601fadf26c25623cf468d7366a2e0879cd15f92527"
 
       def install
         bin.install 'qube'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_darwin_amd64.tar.gz"
-      sha256 "42c36512e05dcd04c404de35fb5e0c38903bbdc85b78bd8c5c35c1c86b511266"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_darwin_arm64.tar.gz"
+      sha256 "ba5af2e2dfc56beb4b0af710f685fed915c29d762ed2dfcc6f16ed6a394dbf40"
 
       def install
         bin.install 'qube'
@@ -28,17 +28,17 @@ class Qube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_linux_amd64.tar.gz"
-      sha256 "072ef964fdafc3a968c2517d7325263ddfeeedaff117d7f4ea89bb8c15b258ab"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_linux_arm64.tar.gz"
+      sha256 "f19b0c1e03bb209a5e85ce1852cf86637d199a9145bbdd931ce01f2b08397c74"
 
       def install
         bin.install 'qube'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_linux_arm64.tar.gz"
-      sha256 "980d4d4c3976afde7787ccd4b6184583ef9dc2e543d34977f3051d9c74b5808f"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.1/qube_1.0.1_linux_amd64.tar.gz"
+      sha256 "faa06e6e9ab01cba1c85f18714e287c648f3ad2ecb53d7d19c527adff06fb505"
 
       def install
         bin.install 'qube'
