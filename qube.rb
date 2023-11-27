@@ -5,21 +5,21 @@
 class Qube < Formula
   desc "qube is a DB load testing tool."
   homepage "https://github.com/winebarrel/qube"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.2/qube_1.0.2_darwin_arm64.tar.gz"
-      sha256 "89464b771a8e9acbcbe8d894e25baa0109754b873a698c15a413ed2fb377584f"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_darwin_amd64.tar.gz"
+      sha256 "80e481b75c995170d6851aacb6046c795101086b4aeb9f0bb79e3c7b1ba210e5"
 
       def install
         bin.install 'qube'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.2/qube_1.0.2_darwin_amd64.tar.gz"
-      sha256 "6d078008b5e8a1ec58a8c87f61513999a4ef6320aad5eff364f968ba5f1c92e5"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_darwin_arm64.tar.gz"
+      sha256 "26233f1eb92baf36af82a011b3487f42ce40e709b60446cbaa7637c98d348720"
 
       def install
         bin.install 'qube'
@@ -29,16 +29,16 @@ class Qube < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.2/qube_1.0.2_linux_arm64.tar.gz"
-      sha256 "60e2e0e53d55e85b5b1d189c62323169e0766cc645d597c4193d88041c29d080"
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_linux_arm64.tar.gz"
+      sha256 "64135dba2ec5630b5aa1475f3e3b0e0ce7d4ccb6f61ccff0dcd18900cee3ce44"
 
       def install
         bin.install 'qube'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.2/qube_1.0.2_linux_amd64.tar.gz"
-      sha256 "b610f4811194990fb8d7696654ea587bc304fc79789360e3385d6b80cde96613"
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_linux_amd64.tar.gz"
+      sha256 "4eaccfb56f8067386576f3ce7a6ae123fbe31f99cdc28877d847ee3447b69492"
 
       def install
         bin.install 'qube'
