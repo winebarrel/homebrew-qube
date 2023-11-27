@@ -5,21 +5,21 @@
 class Qube < Formula
   desc "qube is a DB load testing tool."
   homepage "https://github.com/winebarrel/qube"
-  version "1.0.3"
+  version "1.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_darwin_amd64.tar.gz"
-      sha256 "80e481b75c995170d6851aacb6046c795101086b4aeb9f0bb79e3c7b1ba210e5"
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.4/qube_1.0.4_darwin_amd64.tar.gz"
+      sha256 "4fb627f526c7579d436f3cd06658f3bb659e0dbe9a6a3e5ff9d53a3ddbe15e23"
 
       def install
         bin.install 'qube'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_darwin_arm64.tar.gz"
-      sha256 "26233f1eb92baf36af82a011b3487f42ce40e709b60446cbaa7637c98d348720"
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.4/qube_1.0.4_darwin_arm64.tar.gz"
+      sha256 "f0411cc2950b4dc65649f57502e51d929aec6c82c97f43c3ac122eb44391409f"
 
       def install
         bin.install 'qube'
@@ -29,16 +29,16 @@ class Qube < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_linux_arm64.tar.gz"
-      sha256 "64135dba2ec5630b5aa1475f3e3b0e0ce7d4ccb6f61ccff0dcd18900cee3ce44"
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.4/qube_1.0.4_linux_arm64.tar.gz"
+      sha256 "e2143607b5870a6def8a018225ba197af4f8c065e3f9875836a175321c17287b"
 
       def install
         bin.install 'qube'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.0.3/qube_1.0.3_linux_amd64.tar.gz"
-      sha256 "4eaccfb56f8067386576f3ce7a6ae123fbe31f99cdc28877d847ee3447b69492"
+      url "https://github.com/winebarrel/qube/releases/download/v1.0.4/qube_1.0.4_linux_amd64.tar.gz"
+      sha256 "113c8ea551ba4a04dc5dafc793562bc465ac23ba30b2fcbaaf04c747cd040731"
 
       def install
         bin.install 'qube'
