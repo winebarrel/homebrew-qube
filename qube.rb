@@ -5,21 +5,21 @@
 class Qube < Formula
   desc "qube is a DB load testing tool."
   homepage "https://github.com/winebarrel/qube"
-  version "1.4.0"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/qube/releases/download/v1.4.0/qube_1.4.0_darwin_amd64.tar.gz"
-      sha256 "239a56ddc824c23743b3294d7443b385d4c8a9f487a58d95549885699ddaad97"
+      url "https://github.com/winebarrel/qube/releases/download/v1.5.0/qube_1.5.0_darwin_amd64.tar.gz"
+      sha256 "fb4d4b8989888c3912d97c233b8a834c5ff5da355f28a4aef916c95ad13352b5"
 
       def install
         bin.install 'qube'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/qube/releases/download/v1.4.0/qube_1.4.0_darwin_arm64.tar.gz"
-      sha256 "f8d9ca9cbf8ad473c6058dd056d995a584b493cbb3c48c6e64a494f7cb2b142f"
+      url "https://github.com/winebarrel/qube/releases/download/v1.5.0/qube_1.5.0_darwin_arm64.tar.gz"
+      sha256 "ad10ba56c5ed0ea3686c0a145bd4209a63e21ab99b8c33994a44bddb90a65caa"
 
       def install
         bin.install 'qube'
@@ -28,24 +28,18 @@ class Qube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/qube/releases/download/v1.4.0/qube_1.4.0_linux_amd64.tar.gz"
-        sha256 "666ef97abc489023d586d0d91f3f0f79a9f101e68be6117a320e00a7dc1b10c6"
-
-        def install
-          bin.install 'qube'
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/qube/releases/download/v1.5.0/qube_1.5.0_linux_amd64.tar.gz"
+      sha256 "5881d61fa0505ac5c6f40a05982b61dcf13b2db10c53acad2c01ebb9e2d01428"
+      def install
+        bin.install 'qube'
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/qube/releases/download/v1.4.0/qube_1.4.0_linux_arm64.tar.gz"
-        sha256 "3c049f81f605f37f68dee43166c1f90b6ab050ff78567e5bb8cbcd718b96cd66"
-
-        def install
-          bin.install 'qube'
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/qube/releases/download/v1.5.0/qube_1.5.0_linux_arm64.tar.gz"
+      sha256 "39e6bc41827824ea99098eabb226dbb0ada485c12c43090968625dcb9c46ad9d"
+      def install
+        bin.install 'qube'
       end
     end
   end
