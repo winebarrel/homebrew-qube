@@ -3,7 +3,7 @@ cask "qube" do
   name "qube"
   desc "qube is a DB load testing tool."
   homepage "https://github.com/winebarrel/qube"
-  version "1.7.2"
+  version "1.8.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "qube" do
   on_macos do
     on_intel do
       url "https://github.com/winebarrel/qube/releases/download/v#{version}/qube_#{version}_darwin_amd64.tar.gz"
-      sha256 "46741ce83ca0da5c8ef6d4a5b1c57b0235180a433986f0bd7efb50ad54c6a4d3"
+      sha256 "9b13e6f3c46017f0e0b26fb288aecbcd6f3e34353c3754a1a31cd34c92c7d894"
     end
     on_arm do
       url "https://github.com/winebarrel/qube/releases/download/v#{version}/qube_#{version}_darwin_arm64.tar.gz"
-      sha256 "cbe14220fac7dffb2b65dd15dc11973b73e689b5d46abfc4cbbe60756b14a7a3"
+      sha256 "64a159abf1a51494e243c14b874dae634c4f7061277437b409ad089b504aacb4"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/winebarrel/qube/releases/download/v#{version}/qube_#{version}_linux_amd64.tar.gz"
-      sha256 "0e302e2c30ab4c43db2bc6525f588e7585fc29061ce88358b8840cd6878257f1"
+      sha256 "6eae88bfe2a674886ec2f4de79bd35eca3269d67f79e706eb03e2d077d599442"
     end
     on_arm do
       url "https://github.com/winebarrel/qube/releases/download/v#{version}/qube_#{version}_linux_arm64.tar.gz"
-      sha256 "747fdba95e762a26eec47fae2cd60b1ce19e64e8fc06febd9388db2189b4d60a"
+      sha256 "d44fdba0715c3624ea2a02dd0f241acb9cc140a21fd0a9f312cd96fce46fd85a"
     end
   end
 
